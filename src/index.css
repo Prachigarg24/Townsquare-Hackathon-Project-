@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 210 50% 98%;
-    --foreground: 222 47% 11%;
+    --background: 260 20% 98%;
+    --foreground: 224 71% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 224 71% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 224 71% 4%;
 
-    --primary: 210 79% 32%; // Deep blue
+    --primary: 262 83% 58%; /* Purple */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 142 60% 35%; // Soft green
+    --secondary: 158 64% 39%; /* Green */
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 214 32% 91%; // Light gray-blue
+    --muted: 214 32% 91%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 38 84% 48%; // Warm gold
+    --accent: 35 92% 50%; /* Orange */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,31 +30,31 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 262 83% 58%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 224 71% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 224 71% 4%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 224 71% 4%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 79% 32%;
+    --primary: 262 83% 58%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 142 60% 35%;
+    --secondary: 158 64% 39%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 38 84% 48%;
+    --accent: 35 92% 50%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -62,7 +62,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 262 83% 58%;
   }
 }
 
@@ -95,5 +95,17 @@
   
   .issue-badge-resolved {
     @apply bg-civic-secondary text-white;
+  }
+  
+  .vote-button {
+    @apply flex items-center justify-center w-8 h-8 rounded-full transition-colors;
+  }
+  
+  .vote-button-active {
+    @apply bg-civic-primary text-white;
+  }
+  
+  .vote-button-inactive {
+    @apply bg-gray-200 text-gray-500 hover:bg-gray-300;
   }
 }

@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       colors: {
-        // Educational color palette
+        // Updated color palette
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -53,13 +53,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom educational theme colors
+        // Custom theme colors
         civic: {
-          primary: '#2C5282',   // Deep blue - scholarly, trustworthy
-          secondary: '#38A169', // Soft green - growth, learning
-          accent: '#D69E2E',    // Warm gold - inspiration, wisdom
-          muted: '#E2E8F0',     // Light gray-blue - calm, clean
-          dark: '#1A365D',      // Dark navy - depth, intelligence
+          primary: '#8B5CF6',   // Purple - vibrant and modern
+          secondary: '#10B981', // Green - fresh, approachable
+          accent: '#F59E0B',    // Orange - warm, engaging
+          muted: '#E2E8F0',     // Light gray - clean, neutral
+          dark: '#4B5563',      // Charcoal - depth, mature
         }
       },
       borderRadius: {

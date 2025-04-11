@@ -10,6 +10,7 @@ import Legislation from "./pages/Legislation";
 import Representatives from "./pages/Representatives";
 import Initiatives from "./pages/Initiatives";
 import Impact from "./pages/Impact";
+import Polls from "./pages/Polls";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/representatives" element={<Representatives />} />
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/impact" element={<Impact />} />
+          <Route path="/polls" element={<Polls />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
