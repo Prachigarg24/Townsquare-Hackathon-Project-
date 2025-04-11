@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bell, FileText, MapPin, MessageSquare, Users, Vote } from 'lucide-react';
@@ -6,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { neighborhoods, issues, legislation, representatives, initiatives } from '@/services/mockData';
-import Navbar from '@/components/layout/Navbar';
 
 const Index = () => {
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>('1');
@@ -18,8 +16,6 @@ const Index = () => {
   
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
-      
       <div className="bg-civic-primary text-white">
         <div className="civic-container py-12 md:py-16">
           <div className="max-w-3xl">
@@ -52,7 +48,6 @@ const Index = () => {
       
       <div className="civic-container py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Neighborhood Issues */}
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center text-xl">
@@ -95,7 +90,6 @@ const Index = () => {
             </CardFooter>
           </Card>
           
-          {/* Legislation Updates */}
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center text-xl">
@@ -131,7 +125,6 @@ const Index = () => {
             </CardFooter>
           </Card>
           
-          {/* Community Initiatives */}
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center text-xl">
@@ -162,7 +155,6 @@ const Index = () => {
         </div>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Representatives */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center text-xl">
@@ -199,7 +191,6 @@ const Index = () => {
             </CardFooter>
           </Card>
           
-          {/* Community Voting */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center text-xl">

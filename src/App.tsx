@@ -14,6 +14,7 @@ import Polls from "./pages/Polls";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/layout/Footer";
+import Navbar from "./components/layout/Navbar";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
+          <Navbar />
           <div className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />

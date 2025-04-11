@@ -1,19 +1,33 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Bell, Menu, UserCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Bell, Menu, UserCircle, LogIn } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useToast } from '@/components/ui/use-toast';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import LoginPopup from '../auth/LoginPopup';
 
 const Navbar = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   const showNotification = () => {
     toast({
       title: "Notifications",
       description: "You have 3 new neighborhood updates.",
     });
+  };
+
+  const handleFullLogin = () => {
+    navigate('/login');
   };
 
   return (
@@ -56,6 +70,22 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="ghost" size="icon" className="ml-2">
+                  <LogIn className="h-5 w-5 text-civic-primary" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Sign In to TownSquare</DialogTitle>
+                  <DialogDescription>
+                    Access your community dashboard and participate in local discussions.
+                  </DialogDescription>
+                </DialogHeader>
+                <LoginPopup onFullLogin={handleFullLogin} />
+              </DialogContent>
+            </Dialog>
             <Button variant="ghost" size="icon" onClick={showNotification} className="ml-2">
               <Bell className="h-5 w-5" />
             </Button>
