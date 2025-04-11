@@ -11,7 +11,9 @@ import Representatives from "./pages/Representatives";
 import Initiatives from "./pages/Initiatives";
 import Impact from "./pages/Impact";
 import Polls from "./pages/Polls";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/layout/Footer";
 
 const queryClient = new QueryClient();
 
@@ -21,17 +23,23 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/issues" element={<Issues />} />
-          <Route path="/legislation" element={<Legislation />} />
-          <Route path="/representatives" element={<Representatives />} />
-          <Route path="/initiatives" element={<Initiatives />} />
-          <Route path="/impact" element={<Impact />} />
-          <Route path="/polls" element={<Polls />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="flex flex-col min-h-screen">
+          <div className="flex-1">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/issues" element={<Issues />} />
+              <Route path="/legislation" element={<Legislation />} />
+              <Route path="/representatives" element={<Representatives />} />
+              <Route path="/initiatives" element={<Initiatives />} />
+              <Route path="/impact" element={<Impact />} />
+              <Route path="/polls" element={<Polls />} />
+              <Route path="/login" element={<Login />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
